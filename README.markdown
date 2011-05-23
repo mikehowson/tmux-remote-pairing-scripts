@@ -19,9 +19,14 @@ thats on the path.
 ## Usage
 
 The host user starts the session from the rails project folder using tmux-start. This will create tmux
-server session with four windows:-
+server session called 'pairing' with four windows:-
 
 1. VIM - The coding window
 1. Server - The rails server running on port 3000
 1. Bash - A general usage bash shell
 1. Spork - A spork session to autorun the specs
+
+The remote user can then ssh into the host machine and run tmux-attach.
+
+Once the pairing session has finished run tmux-stop to kill the session
+and the server.
