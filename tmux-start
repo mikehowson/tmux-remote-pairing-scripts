@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+tmux -S /var/tmux/pairing new-session -d -s pairing -n vim 'bash -c "vim TODO.txt; bash"'
+tmux -S /var/tmux/pairing new-window -t pairing -n rails 'bash -c "rails server; bash"'
+tmux -S /var/tmux/pairing new-window -t pairing -n bash  'bash'
+tmux -S /var/tmux/pairing new-window -t pairing -n tests 'bash -c "guard; bash"'
+tmux -S /var/tmux/pairing select-window -t pairing:0
+tmux -S /var/tmux/pairing -2 attach -t pairing
+

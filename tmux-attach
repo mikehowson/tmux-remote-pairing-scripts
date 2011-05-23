@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+tmux -S /var/tmux/pairing -2 attach -t pairing
+
