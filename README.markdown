@@ -11,6 +11,11 @@ session for remote rails pairing over ssh using VIM.
 * Rspec
 * Spork/Guard
 
+You will also need a /var/tmux folder with group permissions.
+Recommended route is to create a tmux group and add all users that will
+be sharing the session to it and then give group permissions to the
+folder.
+
 ## Installation
 
 Copy the script files to /usr/local/bin or any other location you prefer
