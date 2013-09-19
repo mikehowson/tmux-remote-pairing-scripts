@@ -1,0 +1,11 @@
+if $1; then
+  echo "Usage: tmux-new <session name>"
+  exit
+fi
+
+tmux -S /var/tmux/pairing new-session -d -s $1 -n vim 'bash -c "vim TODO.txt; bash"'
+tmux -S /var/tmux/pairing new-window -t $1 -n rails 'bash -c "rails server; bash"'
+tmux -S /var/tmux/pairing new-window -t $1 -n bash  'bash'
+tmux -S /var/tmux/pairing select-window -t $1:0
+tmux -S /var/tmux/pairing -2 attach -t $1
+
