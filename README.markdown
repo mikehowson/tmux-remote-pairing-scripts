@@ -18,8 +18,8 @@ folder.
 
 ## Installation
 
-Copy the script files to /usr/local/bin or any other location you prefer
-thats on the path.
+1. Clone to a folder anywhere you like
+2. run ./install.sh to create symlinks in /usr/local/bin
 
 ## Usage
 
